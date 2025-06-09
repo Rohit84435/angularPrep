@@ -1,0 +1,14 @@
+<div class="col-12 text-center">
+    <button class="btn mx-1" [ngClass]="currentComponent=='Roles'? 'btn-success':'btn-primary' "
+        (click)="disPlay('Roles')">Roles</button>
+    <button class="btn btn-primary" [ngClass]="currentComponent=='Designation'? 'btn-success':'btn-primary' "
+        (click)="disPlay('Designation')">Designation</button>
+</div>
+<div class="row pt-2">
+    <div class="col-12" *ngIf="currentComponent == 'Roles'">
+        <app-role></app-role>
+    </div>
+    <div class="col-12" *ngIf="currentComponent == 'Designation'">
+        <app-designation></app-designation>
+    </div>
+</div>

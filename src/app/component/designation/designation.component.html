@@ -1,4 +1,10 @@
 <div class="row">
+    @if(isLoder){
+    <div class="col-12 d-flex justify-content-center">
+        <div class="spinner-border text-muted "></div>
+    </div>
+    }
+    @else {
     @for (item of designationList; track $index) {
     <div class="col-3">
         <div class="card" style="width: 18rem;">
@@ -9,5 +15,5 @@
             </div>
         </div>
     </div>
-    }
+    }}
 </div>
